@@ -1,0 +1,19 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+remappings = [
+    "@openzeppelin/contracts=lib/hyper-evm-lib/lib/openzeppelin-contracts/contracts",
+    "@openzeppelin/contracts-upgradeable=lib/openzeppelin-contracts-upgradeable/contracts",
+    "@hyper-evm-lib/=lib/hyper-evm-lib/",
+]
+
+[rpc_endpoints]
+hyperliquid = "https://rpc.hyperliquid.xyz/evm"
+hyperliquid_testnet = "https://rpc.hyperliquid-testnet.xyz/evm"
+
+[etherscan]
+hyperliquid = { key = "${ETHERSCAN_API_KEY}", url = "https://api.hyperevmscan.io/api", chain = 999 }
+hyperliquid_testnet = { key = "${ETHERSCAN_API_KEY}", url = "https://api-testnet.hyperevmscan.io/api", chain = 998 }
+
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
